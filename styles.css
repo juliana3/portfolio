@@ -763,4 +763,96 @@
     }
 
 
+      .project-card {
+      position: relative;
+    }
+
+    .video-preview {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%) translateY(8px);
+      width: 320px;
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      z-index: 100;
+    }
+
+    .project-card:hover .video-preview {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+      pointer-events: all;
+    }
+
+    .video-preview-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+      background: rgba(255,255,255,0.04);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .video-preview-header .dots {
+      display: flex;
+      gap: 5px;
+    }
+
+    .video-preview-header .dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .video-preview-header .dots .d-red    { background: #ff5f57; }
+    .video-preview-header .dots .d-yellow { background: #febc2e; }
+    .video-preview-header .dots .d-green  { background: #28c840; }
+
+    .video-preview-header .video-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.4);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 180px;
+    }
+
+    .video-preview iframe {
+      width: 100%;
+      height: 180px;
+      border: none;
+      display: block;
+    }
+
+    .video-preview-placeholder {
+      width: 100%;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.25);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .video-preview-placeholder svg {
+      opacity: 0.3;
+    }
+
+    /* Evitar que el preview se corte en cards del borde */
+    .projects-grid {
+      overflow: visible !important;
+    }
+
+
     

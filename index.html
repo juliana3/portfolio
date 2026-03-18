@@ -7,99 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* ── Video Preview ── */
-    .project-card {
-      position: relative;
-    }
-
-    .video-preview {
-      position: absolute;
-      bottom: calc(100% + 10px);
-      left: 50%;
-      transform: translateX(-50%) translateY(8px);
-      width: 320px;
-      background: #0d0d0d;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.25s ease, transform 0.25s ease;
-      z-index: 100;
-    }
-
-    .project-card:hover .video-preview {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-      pointer-events: all;
-    }
-
-    .video-preview-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 8px 12px;
-      background: rgba(255,255,255,0.04);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .video-preview-header .dots {
-      display: flex;
-      gap: 5px;
-    }
-
-    .video-preview-header .dots span {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-    }
-
-    .video-preview-header .dots .d-red    { background: #ff5f57; }
-    .video-preview-header .dots .d-yellow { background: #febc2e; }
-    .video-preview-header .dots .d-green  { background: #28c840; }
-
-    .video-preview-header .video-title {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.65rem;
-      color: rgba(255,255,255,0.4);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 180px;
-    }
-
-    .video-preview iframe {
-      width: 100%;
-      height: 180px;
-      border: none;
-      display: block;
-    }
-
-    .video-preview-placeholder {
-      width: 100%;
-      height: 180px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      color: rgba(255,255,255,0.25);
-      font-family: 'Space Mono', monospace;
-      font-size: 0.7rem;
-      background: rgba(255,255,255,0.02);
-    }
-
-    .video-preview-placeholder svg {
-      opacity: 0.3;
-    }
-
-    /* Evitar que el preview se corte en cards del borde */
-    .projects-grid {
-      overflow: visible !important;
-    }
-  </style>
+  
 </head>
 <body>
 
@@ -125,7 +33,7 @@
       <span class="highlight">Juliana.</span>
     </h1>
     <p class="hero-role">
-      Backend Developer
+      Desarrolladora de Software - Full Stack
       <span class="dot">·</span>
       Python Enthusiast
       <span class="dot">·</span>
@@ -142,31 +50,13 @@
     </div>
     <div class="hero-badges">
       <span class="badge py"><i data-lucide="snake"></i> Python</span>
+      <span class="badge py"><i data-lucide="braces"></i> JS</span>
+      <span class="badge py"><i data-lucide="component"></i> React</span>
       <span class="badge api"><i data-lucide="zap"></i> FastAPI</span>
       <span class="badge db"><i data-lucide="database"></i> PostgreSQL</span>
       <span class="badge"><i data-lucide="box"></i> Docker</span>
       <span class="badge"><i data-lucide="link"></i> REST APIs</span>
       <span class="badge"><i data-lucide="flask-conical"></i> Flask</span>
-    </div>
-
-    <div class="hero-code">
-      <div class="code-header">
-        <span class="dot-red"></span>
-        <span class="dot-yellow"></span>
-        <span class="dot-green"></span>
-      </div>
-      <span class="code-line"><span class="code-kw">from</span> developer <span class="code-kw">import</span> me</span>
-      <span class="code-line"> </span>
-      <span class="code-line"><span class="code-comment"># quién soy</span></span>
-      <span class="code-line"><span class="code-fn">me</span>.nombre = <span class="code-str">"Juliana"</span></span>
-      <span class="code-line"><span class="code-fn">me</span>.rol = <span class="code-str">"Backend Dev"</span></span>
-      <span class="code-line"><span class="code-fn">me</span>.stack = [</span>
-      <span class="code-line">  <span class="code-str">"Python"</span>, <span class="code-str">"FastAPI"</span>,</span>
-      <span class="code-line">  <span class="code-str">"PostgreSQL"</span>, <span class="code-str">"Flask"</span></span>
-      <span class="code-line">]</span>
-      <span class="code-line"> </span>
-      <span class="code-line"><span class="code-kw">def</span> <span class="code-fn">open_to_work</span>():</span>
-      <span class="code-line">  <span class="code-kw">return</span> <span class="code-str">True</span> <span class="code-comment">✓</span></span>
     </div>
   </section>
 
@@ -186,7 +76,7 @@
       <div class="info-card reveal">
         <span class="info-icon"><i data-lucide="mail"></i></span>
         <div class="info-label">Email</div>
-        <div class="info-value">hola@juliana.dev</div>
+        <div class="info-value">juli.araujo.caps@gmail.com</div>
       </div>
       <div class="info-card reveal">
         <span class="info-icon"><i data-lucide="github"></i></span>
@@ -196,16 +86,18 @@
       <div class="info-card reveal">
         <span class="info-icon"><i data-lucide="linkedin"></i></span>
         <div class="info-label">LinkedIn</div>
-        <div class="info-value">linkedin.com/in/juliana</div>
+        <div class="info-value">linkedin.com/in/juliana-araujo4</div>
       </div>
       <div class="info-card wide reveal">
         <span class="info-icon"><i data-lucide="code-2"></i></span>
         <div class="info-label">Bio</div>
-          <p class="about-text">
-            Soy Técnico Superior en Desarrollo de Software con base en Santa Fe. El backend es donde me siento más cómoda, 
-            trabajando principalmente con Python. Disfruto construir sistemas que resuelvan problemas concretos, 
-            soy buena trabajando en equipo y tengo pensamiento crítico y lógico y me gusta anticiparme a los problemas antes de que aparezcan.
-          </p>
+        <p class="about-text">
+          Soy Técnico Superior en Desarrollo de Software con base en Santa Fe. Trabajo como desarrolladora Full Stack, 
+          con mayor afinidad por el backend, donde me siento más cómoda trabajando principalmente con Python. 
+          Disfruto construir sistemas que resuelvan problemas concretos, integrando tanto la lógica del servidor como 
+          la experiencia del usuario. Trabajo bien en equipo, tengo pensamiento crítico y lógico, y me gusta 
+          anticiparme a los problemas antes de que aparezcan.
+        </p>
         <div class="tech-stack">
           <div class="tech-pill" style="--i:0">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/>
@@ -253,18 +145,11 @@
 
     <div class="projects-grid">
 
-      <!-- Para agregar un video de YouTube, reemplazá VIDEO_ID por el ID del video -->
-      <!-- Ejemplo YouTube: https://www.youtube.com/watch?v=VIDEO_ID → usar VIDEO_ID -->
-      <!-- Ejemplo Drive: https://drive.google.com/file/d/FILE_ID/view → usar FILE_ID -->
-
       <div class="project-card reveal">
-        <!-- VIDEO: reemplazá YOUTUBE_ID con el ID real cuando lo tengas -->
         <div class="video-preview">
           <div class="video-preview-header">
             <div class="dots">
-              <span class="d-red"></span>
-              <span class="d-yellow"></span>
-              <span class="d-green"></span>
+              <span class="d-red"></span><span class="d-yellow"></span><span class="d-green"></span>
             </div>
             <span class="video-title">BasurApp — demo</span>
           </div>
@@ -272,13 +157,6 @@
             <i data-lucide="video" style="width:28px;height:28px"></i>
             <span>// video próximamente</span>
           </div>
-          <!-- Cuando tengas el video, reemplazá el placeholder por esto:
-          <iframe
-            src="https://www.youtube.com/embed/YOUTUBE_ID?autoplay=1&mute=1&controls=0&loop=1"
-            allow="autoplay; encrypted-media"
-            allowfullscreen>
-          </iframe>
-          -->
         </div>
         <div class="project-emoji"><i data-lucide="truck"></i></div>
         <div class="project-title">BasurApp — Seguimiento de recolección de residuos</div>
@@ -305,9 +183,7 @@
         <div class="video-preview">
           <div class="video-preview-header">
             <div class="dots">
-              <span class="d-red"></span>
-              <span class="d-yellow"></span>
-              <span class="d-green"></span>
+              <span class="d-red"></span><span class="d-yellow"></span><span class="d-green"></span>
             </div>
             <span class="video-title">BasurApp v2 — demo</span>
           </div>
@@ -342,9 +218,7 @@
         <div class="video-preview">
           <div class="video-preview-header">
             <div class="dots">
-              <span class="d-red"></span>
-              <span class="d-yellow"></span>
-              <span class="d-green"></span>
+              <span class="d-red"></span><span class="d-yellow"></span><span class="d-green"></span>
             </div>
             <span class="video-title">Bot de Slack — demo</span>
           </div>
@@ -357,9 +231,9 @@
         <div class="project-title">Bot de Slack — Onboarding automático</div>
         <p class="project-desc">
           Sistema de automatización de onboarding de empleados desarrollado durante 
-          mis pasantías. Este sistema redujo el tiempo y la carga operativa del proceso 
-          de incorporación de nuevos empleados, eliminando pasos manuales y asegurando 
-          que cada ingreso quede registrado correctamente desde el primer día.
+          mis pasantías. Redujo el tiempo y la carga operativa del proceso de 
+          incorporación, eliminando pasos manuales y asegurando que cada ingreso 
+          quede registrado correctamente desde el primer día.
         </p>
         <div class="project-tags">
           <span class="tag">Python</span>
@@ -370,7 +244,6 @@
           <span class="tag">Docker</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/juliana3/bot-slack" target="_blank" class="project-link">Ver repositorio →</a>
           <a href="https://deepwiki.com/juliana3/bot-slack" target="_blank" class="project-demo">Ver documentación →</a>
         </div>
       </div>
@@ -379,9 +252,7 @@
         <div class="video-preview">
           <div class="video-preview-header">
             <div class="dots">
-              <span class="d-red"></span>
-              <span class="d-yellow"></span>
-              <span class="d-green"></span>
+              <span class="d-red"></span><span class="d-yellow"></span><span class="d-green"></span>
             </div>
             <span class="video-title">CrombieJuegos — demo</span>
           </div>
@@ -406,7 +277,6 @@
           <span class="tag">Google Drive</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/2Diego2/CrombieJuegos" target="_blank" class="project-link">Ver repositorio →</a>
           <a href="https://deepwiki.com/2Diego2/CrombieJuegos" target="_blank" class="project-demo">Ver documentación →</a>
         </div>
       </div>
@@ -415,9 +285,7 @@
         <div class="video-preview">
           <div class="video-preview-header">
             <div class="dots">
-              <span class="d-red"></span>
-              <span class="d-yellow"></span>
-              <span class="d-green"></span>
+              <span class="d-red"></span><span class="d-yellow"></span><span class="d-green"></span>
             </div>
             <span class="video-title">CORRELAX — demo</span>
           </div>
@@ -446,6 +314,38 @@
           <a href="https://deepwiki.com/juliana3/academic" target="_blank" class="project-demo">Ver documentación →</a>
         </div>
       </div>
+
+      <div class="project-card reveal">
+        <div class="video-preview">
+          <div class="video-preview-header">
+            <div class="dots">
+              <span class="d-red"></span><span class="d-yellow"></span><span class="d-green"></span>
+            </div>
+            <span class="video-title">Turnero — en desarrollo</span>
+          </div>
+          <div class="video-preview-placeholder">
+            <i data-lucide="video" style="width:28px;height:28px"></i>
+            <span>// video próximamente</span>
+          </div>
+        </div>
+        <div class="project-emoji"><i data-lucide="calendar-clock"></i></div>
+        <div class="project-title">Turnero — Sistema de gestión de turnos + FAQs</div>
+        <p class="project-desc">
+          Sistema de gestión de turnos para un laboratorio bioquímico. 
+          Permite a los pacientes reservar sin registrarse, con validación de obra social 
+          y detección de casos que requieren atención especial.
+          Incluye un dashboard para la bioquímica con visualización en tiempo real, 
+          cancelación de turnos, configuración de franjas horarias y avisos de cierre. 
+          Integra notificaciones automáticas por WhatsApp y alertas ante nuevos turnos.
+        </p>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Express</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">WIP</span>
+        </div>
       </div>
 
     </div>
@@ -517,9 +417,9 @@
     <div class="contact-wrapper">
       <div class="reveal">
         <p class="contact-intro">
-          ¿Tenés un proyecto en mente, querés colaborar o simplemente charlar sobre código?<br/><br/>
-          <strong>Estoy disponible</strong> para oportunidades freelance, trabajo en equipo 
-          y todo lo que tenga que ver con Python y backend. No dudes en escribirme.
+          ¿Tenés un proyecto en mente o querés colaborar en algo?<br/><br/>
+          Me sumo a proyectos de todo tipo -> backend, frontend o full stack. 
+          No dudes en escribirme.
         </p>
       </div>
 
@@ -538,7 +438,7 @@
           <span class="contact-card-arrow">→</span>
         </a>
 
-        <a href="https://linkedin.com/in/juliana" target="_blank" class="contact-card linkedin reveal">
+        <a href="https://linkedin.com/in/juliana-araujo4" target="_blank" class="contact-card linkedin reveal">
           <div class="contact-card-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
               <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
@@ -546,16 +446,16 @@
           </div>
           <div class="contact-card-info">
             <div class="contact-card-label">LinkedIn</div>
-            <div class="contact-card-value">linkedin.com/in/juliana</div>
+            <div class="contact-card-value">linkedin.com/in/juliana-araujo4</div>
           </div>
           <span class="contact-card-arrow">→</span>
         </a>
 
-        <a href="mailto:hola@juliana.dev" class="contact-card email reveal">
+        <a href="mailto:juli.araujo.caps@gmail.com" class="contact-card email reveal">
           <div class="contact-card-icon"><i data-lucide="mail"></i></div>
           <div class="contact-card-info">
             <div class="contact-card-label">Email</div>
-            <div class="contact-card-value">hola@juliana.dev</div>
+            <div class="contact-card-value">juli.araujo.caps@gmail.com</div>
           </div>
           <span class="contact-card-arrow">→</span>
         </a>
@@ -564,7 +464,7 @@
           <div class="contact-card-icon"><i data-lucide="smartphone"></i></div>
           <div class="contact-card-info">
             <div class="contact-card-label">Teléfono / WhatsApp</div>
-            <div class="contact-card-value">+54 9 000 000-0000</div>
+            <div class="contact-card-value">+54 3491 - 409253</div>
           </div>
           <span class="contact-card-arrow">→</span>
         </a>
@@ -575,16 +475,15 @@
 
   <!-- FOOTER -->
   <footer>
-    <p class="footer-text">© 2025 Juliana — hecho con <i data-lucide="code-2"></i> y <i data-lucide="coffee"></i></p>
+    <p class="footer-text">© 2025 Juliana — hecho con <i data-lucide="code-2"></i> y <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;display:inline-block"><ellipse cx="12" cy="17" rx="5" ry="4"/><path d="M7 17V10h10v7"/><path d="M9 10V7h6v3"/><path d="M12 7V4"/><path d="M10 4c0 0 .5-1.5 2-1.5S14 4 14 4"/><line x1="16" y1="13" x2="19" y2="11"/><path d="M19 11 q2-1 1.5 1.5 q-.5 2-2.5 1.5"/></svg></p>
     <div class="social-links">
       <a href="https://github.com/juliana3" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/juliana" target="_blank">LinkedIn</a>
-      <a href="mailto:hola@juliana.dev">Email</a>
+      <a href="https://linkedin.com/in/juliana-araujo4" target="_blank">LinkedIn</a>
+      <a href="mailto:juli.araujo.caps@gmail.com">Email</a>
     </div>
   </footer>
 
   <script>
-    // Custom cursor
     const cursor = document.getElementById('cursor');
     const ring = document.getElementById('cursorRing');
     let mx = 0, my = 0, rx = 0, ry = 0;
@@ -615,7 +514,6 @@
       });
     });
 
-    // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -629,7 +527,6 @@
 
     document.querySelectorAll('.reveal, .timeline-item').forEach(el => observer.observe(el));
 
-    // Animate tech pills
     const pillObserver = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -642,7 +539,6 @@
 
     document.querySelectorAll('.info-card.wide').forEach(el => pillObserver.observe(el));
 
-    // Inicializar iconos Lucide
     lucide.createIcons();
   </script>
 </body>
