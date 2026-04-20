@@ -176,7 +176,7 @@
         <div class="project-links">
           <a href="https://github.com/juliana3/proyecto_final" target="_blank" class="project-link">Ver repositorio →</a>
           <a href="https://deepwiki.com/juliana3/proyecto_final" target="_blank" class="project-demo">Ver documentación →</a>
-          <a href="https://basur-app.vercel.app/" target="_blank" class="project-link">Ver proyecto →</a>
+          <!--<a href="https://basur-app.vercel.app/" target="_blank" class="project-link">Ver proyecto →</a> -->
         </div>
       </div>
 
@@ -194,7 +194,7 @@
           </div>
         </div>
         <div class="project-emoji"><i data-lucide="construction"></i></div>
-        <div class="project-title">BasurApp v2 — Refactor <span style="font-size:0.7em; opacity:0.6">(WIP)</span></div>
+        <div class="project-title">EN DESARROLLO:  BasurApp v2 — Refactor</div>
         <p class="project-desc">
           Refactorización completa del backend con una arquitectura más robusta. 
           Reemplaza la simulación por datos reales: gestión de zonas con PostGIS, 
@@ -207,7 +207,7 @@
           <span class="tag">PostgreSQL</span>
           <span class="tag">PostGIS</span>
           <span class="tag">Docker</span>
-          <span class="tag">WIP</span>
+          <span class="tag wip">WIP</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/juliana3/seguimiento_camiones" target="_blank" class="project-link">Ver repositorio →</a>
@@ -313,7 +313,7 @@
         <div class="project-links">
           <a href="https://github.com/juliana3/academic" target="_blank" class="project-link">Ver repositorio →</a>
           <a href="https://deepwiki.com/juliana3/academic" target="_blank" class="project-demo">Ver documentación →</a>
-          <a href="https://correlax.vercel.app" target="_blank" class="project-link">Ver proyecto →</a>
+          <!--<a href="https://correlax.vercel.app" target="_blank" class="project-link">Ver proyecto →</a> -->
         </div>
       </div>
 
@@ -323,15 +323,15 @@
             <div class="dots">
               <span class="d-red"></span><span class="d-yellow"></span><span class="d-green"></span>
             </div>
-            <span class="video-title">Turnero — en desarrollo</span>
+            <span class="video-title">Turnero</span>
           </div>
           <div class="video-preview-placeholder">
             <i data-lucide="video" style="width:28px;height:28px"></i>
             <span>// video próximamente</span>
           </div>
         </div>
-        <div class="project-emoji"><i data-lucide="calendar-clock"></i></div>
-        <div class="project-title">Turnero — Sistema de gestión de turnos + FAQs</div>
+        <div class="project-emoji"><i data-lucide="construction"></i></div>
+        <div class="project-title">EN DESARROLLO :  Turnero — Sistema de gestión de turnos + FAQs </div>
         <p class="project-desc">
           Sistema de gestión de turnos para un laboratorio bioquímico. 
           Permite a los pacientes reservar sin registrarse, con validación de obra social 
@@ -346,7 +346,7 @@
           <span class="tag">Express</span>
           <span class="tag">PostgreSQL</span>
           <span class="tag">Supabase</span>
-          <span class="tag">WIP</span>
+          <span class="tag wip">WIP</span>
         </div>
       </div>
 
@@ -365,11 +365,21 @@
       <div class="timeline-item">
         <div class="timeline-date">En curso</div>
         <div class="timeline-title">Licenciatura en Ciencia de Datos</div>
-        <div class="timeline-inst">Universidad — Santa Fe</div>
+        <div class="timeline-inst">FIQ-UNL — Santa Fe</div>
         <p class="timeline-desc">
           Formación en análisis de datos, estadística, machine learning y 
           visualización. Complementa la base de desarrollo backend con 
           herramientas para trabajar con datos a escala.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">En curso</div>
+        <div class="timeline-title">Inglés</div>
+        <div class="timeline-inst"> Escuela de idiomas Liceo municipal Antonio Fuentes del Arco — Santa Fe</div>
+        <p class="timeline-desc">
+          Formación integral en inglés: comprensión lectora, escritura, conversación y pronunciación.
+          Actualmente nivel A2.
         </p>
       </div>
 
@@ -485,63 +495,6 @@
     </div>
   </footer>
 
-  <script>
-    const cursor = document.getElementById('cursor');
-    const ring = document.getElementById('cursorRing');
-    let mx = 0, my = 0, rx = 0, ry = 0;
-
-    document.addEventListener('mousemove', e => {
-      mx = e.clientX; my = e.clientY;
-      cursor.style.left = mx - 6 + 'px';
-      cursor.style.top  = my - 6 + 'px';
-    });
-
-    function animateRing() {
-      rx += (mx - rx) * 0.12;
-      ry += (my - ry) * 0.12;
-      ring.style.left = rx - 18 + 'px';
-      ring.style.top  = ry - 18 + 'px';
-      requestAnimationFrame(animateRing);
-    }
-    animateRing();
-
-    document.querySelectorAll('a, button').forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        cursor.style.transform = 'scale(2.5)';
-        ring.style.width = '50px'; ring.style.height = '50px';
-      });
-      el.addEventListener('mouseleave', () => {
-        cursor.style.transform = 'scale(1)';
-        ring.style.width = '36px'; ring.style.height = '36px';
-      });
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          e.target.querySelectorAll('.skill-fill').forEach(bar => {
-            bar.classList.add('animate');
-          });
-        }
-      });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll('.reveal, .timeline-item').forEach(el => observer.observe(el));
-
-    const pillObserver = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.querySelectorAll('.tech-pill').forEach(pill => {
-            pill.classList.add('visible');
-          });
-        }
-      });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll('.info-card.wide').forEach(el => pillObserver.observe(el));
-
-    lucide.createIcons();
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
